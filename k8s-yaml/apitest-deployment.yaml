@@ -14,7 +14,7 @@ spec:
         app: ${CICD_GIT_REPO_NAME}-${CICD_GIT_BRANCH}-apitest
     spec:
       imagePullSecrets:
-      - name: harbor-local
+      - name: pipeline-docker-registry
       containers:
       - name: apitest
         image: "${CICD_IMAGE}:${CICD_GIT_COMMIT}"
